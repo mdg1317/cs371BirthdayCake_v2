@@ -6,6 +6,7 @@ import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.CompoundButton;
+import android.widget.SeekBar;
 
 public class MainActivity extends AppCompatActivity {
    private CakeView cakeView;
@@ -25,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
 
         CompoundButton candles = findViewById(R.id.candles);
         candles.setOnCheckedChangeListener(cakeController);
+
+        SeekBar candleBar = findViewById(R.id.candleBar);
+        candleBar.setOnSeekBarChangeListener(cakeController);
     }
 
     public void goodbye(View button) {
